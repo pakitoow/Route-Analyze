@@ -1,0 +1,29 @@
+{
+    "url": "https:\/\/www.facebook.com",
+    "timestamp": "2025-08-06T18:54:28+00:00",
+    "results": [
+        {
+            "name": "Status code is 200",
+            "passed": true,
+            "details": "Response returned HTTP 200",
+            "estimated_fix_time": null
+        },
+        {
+            "name": "HTML file size is acceptable",
+            "passed": true,
+            "details": "HTML size is 20.5 KB",
+            "estimated_fix_time": null
+        },
+        {
+            "name": "TTFB is acceptable",
+            "passed": true,
+            "details": "Time to First Byte is 2 ms",
+            "estimated_fix_time": null
+        }
+    ],
+    "summary": {
+        "passed": 3,
+        "failed": 0,
+        "total": 3
+    }
+}

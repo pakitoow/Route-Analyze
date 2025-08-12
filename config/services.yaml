@@ -1,0 +1,29 @@
+# config/services.yaml
+
+parameters:
+# Add any parameters here if needed
+
+services:
+    _defaults:
+        autowire: true      # Automatically inject dependencies in your services
+        autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
+        public: false       # By default, services are private (recommended)
+
+    # Makes classes in src/ available as services
+    App\:
+        resource: '../src/'
+        # By default, all services here are private, autowired, and autoconfigured
+
+    # Explicit service definitions for our Route Checker
+    App\Service\RouteChecker:
+        public: true
+
+    # Explicitly register command with dependency injection
+    App\Command\AnalyzeRouteCommand:
+        arguments:
+            $routeChecker: '@App\Service\RouteChecker'
+        tags:
+            - { name: 'console.command' }
+        public: true
+
+
