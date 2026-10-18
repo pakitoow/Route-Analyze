@@ -4,7 +4,7 @@ namespace App\Command;
 
 use App\Service\RouteChecker;
 use App\Service\HeadingAnalyzer;
-use App\Service\ImageAltChecker;  // ADD THIS USE STATEMENT
+use App\Service\ImageAltChecker;
 use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
@@ -20,7 +20,7 @@ class AnalyzeRouteCommand extends Command
 {
     public function __construct(
         private RouteChecker $routeChecker,
-        private HeadingAnalyzer $headingAnalyzer,  // ADD COMMA HERE
+        private HeadingAnalyzer $headingAnalyzer,
         private ImageAltChecker $imageAltChecker
     ) {
         parent::__construct();
